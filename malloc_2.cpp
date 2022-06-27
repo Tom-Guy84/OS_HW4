@@ -85,7 +85,6 @@ void* smalloc(size_t size)
 	MMData trying_with_freed = first_free(size);
 	
 	void* ret = NULL;
-	void* prev_pgbrk = sbrk(0);
 	
 	if(trying_with_freed == NULL)
 	{
